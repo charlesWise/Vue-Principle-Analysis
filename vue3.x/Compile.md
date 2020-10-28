@@ -7,7 +7,7 @@ vue3按需更新 编译时优化
 code => ast => 静态标记 => 生成最终代码执行
 
 ### 静态标记，vue2是否也是有静态标记？
-编译时优化（灵感来自prepack.io）
+编译时优化（灵感来自prepack.io），通过位运算做的标记patchFlag，react事件系统也用到位运算
 
 vue2也是有静态标记，只能标记全量的静态，比如v-if里面的就都视为动态标记就不会去标记，再如：
 <p id="xx" style="color: red">{{name}}</p>这个节点只有child是动态vue2也会去diff id、style；而vue3只会去diff children name，做的更细致些只会diff动态的节点
