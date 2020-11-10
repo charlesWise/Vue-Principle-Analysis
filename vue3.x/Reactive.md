@@ -2,6 +2,6 @@
 
 - 响应式 虚拟dom 模版编译 组件化
 
-- track(target, key) 收集依赖 trigger(target, key, info) 去执行effect
+- track(target, key) 收集依赖 trigger(target, key, info) 触发更新去执行effect
 
 - effects computeds
